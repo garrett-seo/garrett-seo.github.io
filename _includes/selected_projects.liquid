@@ -1,0 +1,60 @@
+<div class="projects">
+  {% if page.project_items %}
+    {% for project in page.project_items %}
+      <div class="project-item mb-4">
+        <!-- Title -->
+        <div class="title">{{ project.title }}</div>
+        
+        <!-- Description -->
+        {% if project.description %}
+          <div class="description">{{ project.description }}</div>
+        {% endif %}
+        
+        <!-- Award Badge -->
+        {% if project.award %}
+          <span class="badge rounded" style="background-color: #4CAF50; color: white;">{{ project.award }}</span>
+        {% endif %}
+        
+        <!-- Date -->
+        {% if project.date %}
+          <div class="date text-muted mb-2">{{ project.date }}</div>
+        {% endif %}
+        
+        <!-- Links (styled like publication buttons) -->
+        <div class="links mt-2">
+          {% if project.code %}
+            <a href="{{ project.code }}" class="btn btn-sm z-depth-0" role="button" target="_blank">CODE</a>
+          {% endif %}
+          
+          {% if project.poster %}
+            {% if project.poster contains '://' %}
+              <a href="{{ project.poster }}" class="btn btn-sm z-depth-0" role="button" target="_blank">POSTER</a>
+            {% else %}
+              <a href="{{ '/assets/pdf/' | append: project.poster | relative_url }}" class="btn btn-sm z-depth-0" role="button" target="_blank">POSTER</a>
+            {% endif %}
+          {% endif %}
+          
+          {% if project.slides %}
+            {% if project.slides contains '://' %}
+              <a href="{{ project.slides }}" class="btn btn-sm z-depth-0" role="button" target="_blank">SLIDES</a>
+            {% else %}
+              <a href="{{ '/assets/pdf/' | append: project.slides | relative_url }}" class="btn btn-sm z-depth-0" role="button" target="_blank">SLIDES</a>
+            {% endif %}
+          {% endif %}
+          
+          {% if project.award_pdf %}
+            {% if project.award_pdf contains '://' %}
+              <a href="{{ project.award_pdf }}" class="btn btn-sm z-depth-0" role="button" target="_blank">AWARD</a>
+            {% else %}
+              <a href="{{ '/assets/pdf/' | append: project.award_pdf | relative_url }}" class="btn btn-sm z-depth-0" role="button" target="_blank">AWARD</a>
+            {% endif %}
+          {% endif %}
+          
+          {% if project.website %}
+            <a href="{{ project.website }}" class="btn btn-sm z-depth-0" role="button" target="_blank">WEBSITE</a>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  {% endif %}
+</div>
