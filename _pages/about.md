@@ -36,4 +36,4 @@ latest_posts:
 ---
 Hello! I am a Computer Science Master's student at Rutgers University being advised by Prof. Xintong Wang.
 
-My research interests are in EconCS, multi-agent systems, and game theory. I'm currently focusing on negotiation and bargaining games, including solving game-theoretic optimal strategies, multi-issue negotiation, and LLM-based agents.
+My research interests are in AI, multi-agent systems, game theory, and the intersections of computer science and economics. I'm currently working on negotiation and bargaining games, including solving game-theoretic optimal strategies, multi-issue negotiation, and LLM-based agents.
