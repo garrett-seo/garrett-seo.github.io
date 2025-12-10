@@ -1,7 +1,9 @@
 <div class="projects">
   {% if page.project_items %}
     {% for project in page.project_items %}
-      <div class="project-item mb-4">
+      <div class="project-item mb-4" id="{% if project.title == 'Automated Negotiating Agent Competition 2025' %}anac{% else %}{{ project.title | slugify }}{% endif %}">
+        
+
         <!-- Title -->
         <div class="title">{{ project.title }}</div>
         
