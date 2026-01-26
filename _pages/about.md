@@ -11,7 +11,7 @@ profile:
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 selected_projects: true
-project_items:  # Add your competitions here
+project_items: # Add your competitions here
   - title: "Automated Negotiating Agent Competition 2025"
     description: "Automated negotiation agent for sequential, multi-deal negotiation that won 1st place out of 17 international teams. Presented at IJCAI 2025."
     award: "1st Place"
@@ -21,7 +21,7 @@ project_items:  # Add your competitions here
     slides: "ANLslides.pdf"
     award_pdf: "ANLaward.pdf"
     website: "https://anac.cs.brown.edu/anl2025"
-  
+
 social: true # includes social icons at the bottom of the page
 
 announcements:
@@ -34,6 +34,7 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
+
 Hello! I am a Computer Science Master's student at Rutgers University being advised by Prof. Xintong Wang.
 
 My research interests are in AI, multi-agent systems, game theory, and the intersections of computer science and economics. I'm currently working on negotiation and bargaining games, including solving game-theoretic optimal strategies, multi-issue negotiation, and LLM-based agents.

@@ -59,7 +59,7 @@ layout: default
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2>
-        <!--This is a comment in Liquid - removed the hyperlink to publications page -->
+        <!-- This is a comment in Liquid - removed the hyperlink to publications page -->
         Research Papers
       </h2>
       {% include selected_papers.liquid %}
@@ -67,7 +67,7 @@ layout: default
 
     <!-- Selected Projects/Competitions -->
     {% if page.selected_projects %}
-      <h2>{{ page.selected_projects_title | default: "Projects & Competitions" }}</h2>
+      <h2>{{ page.selected_projects_title | default: 'Projects & Competitions' }}</h2>
       {% include selected_projects.liquid %}
     {% endif %}
 

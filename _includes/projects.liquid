@@ -13,17 +13,17 @@
     <div class="card-body">
       <h2 class="card-title">{{ project.title }}</h2>
       <p class="card-text">{{ project.description }}</p>
-      
+
       {% if project.award %}
         <div class="award-badge mb-2">
           <span class="badge badge-pill badge-success">{{ project.award }}</span>
         </div>
       {% endif %}
-      
+
       {% if project.date %}
         <p class="text-muted small">{{ project.date }}</p>
       {% endif %}
-      
+
       <div class="row ml-1 mr-1 p-0 mt-2">
         <!-- GitHub/Code Link -->
         {% if project.github %}
@@ -41,7 +41,7 @@
         {% elsif project.code %}
           <a href="{{ project.code }}" class="btn btn-sm z-depth-0 mr-1" role="button">Code</a>
         {% endif %}
-        
+
         <!-- Poster Link -->
         {% if project.poster %}
           {% if project.poster contains '://' %}
@@ -50,7 +50,7 @@
             <a href="{{ project.poster | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0 mr-1" role="button">Poster</a>
           {% endif %}
         {% endif %}
-        
+
         <!-- Slides Link -->
         {% if project.slides %}
           {% if project.slides contains '://' %}
@@ -59,7 +59,7 @@
             <a href="{{ project.slides | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0 mr-1" role="button">Slides</a>
           {% endif %}
         {% endif %}
-        
+
         <!-- Award PDF Link -->
         {% if project.award_pdf %}
           {% if project.award_pdf contains '://' %}
@@ -68,15 +68,20 @@
             <a href="{{ project.award_pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0 mr-1" role="button">Award</a>
           {% endif %}
         {% endif %}
-        
+
         <!-- Website Link -->
         {% if project.website %}
           <a href="{{ project.website }}" class="btn btn-sm z-depth-0 mr-1" role="button">Website</a>
         {% endif %}
-        
+
         <!-- Project Page Link -->
         {% if project.redirect or project.url %}
-          <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}" class="btn btn-sm z-depth-0 mr-1" role="button">Details</a>
+          <a
+            href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}"
+            class="btn btn-sm z-depth-0 mr-1"
+            role="button"
+            >Details</a
+          >
         {% endif %}
       </div>
     </div>

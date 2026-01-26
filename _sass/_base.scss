@@ -197,7 +197,6 @@ ul.task-list input[type="checkbox"] {
 
 .profile {
   width: 100%;
-  
 
   // .more-info {
   //   margin-bottom: 5px;
@@ -215,9 +214,9 @@ ul.task-list input[type="checkbox"] {
   float: right;
   margin-left: 2rem;
   margin-right: 0;
-  width: 20%;  // Use percentage instead of fixed pixels (adjust 20-35%)
-  min-width: 200px;  // Minimum size on small screens
-  max-width: 250px;  // Maximum size on large screens
+  width: 20%; // Use percentage instead of fixed pixels (adjust 20-35%)
+  min-width: 200px; // Minimum size on small screens
+  max-width: 250px; // Maximum size on large screens
 }
 
 .profile.float-left {
